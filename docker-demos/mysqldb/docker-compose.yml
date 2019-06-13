@@ -1,0 +1,27 @@
+## Docker Compose : Configure and Run multiple containers as a part of single project.
+## File name MUST BE either 'docker-compose.yaml' or 'docker-compose.yml'
+## YAML file, Idents define the parent-child relation
+## Every docker-compose file must be stored in SEPERATE FOLDER
+## The parent folder for docker-compose file becomes PROJECT-NAME
+version: "3"
+
+services:
+    mydb:
+        image: mysql:5.7
+        volumes: 
+          - "d:/mydata:/var/lib/mysql"
+        environment:
+          MYSQL_USER:           mahendra
+          MYSQL_PASSWORD:       pass1234
+          MYSQL_ROOT_PASSWORD:  pass12345
+          MYSQL_DATABASE:       mydata
+        
+# To Validate this file
+# $ docker-compose config
+# Execute and Launch all containers
+# $ docker-compose up -d
+# $ docker-compose logs
+# $ docker-compose ps
+# $ docker-compose down
+
+            

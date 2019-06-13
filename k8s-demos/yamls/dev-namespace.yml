@@ -1,0 +1,11 @@
+## Version of API Server
+apiVersion: v1
+## Kind of Object to be defined
+## Common kinds are :  Pod, ReplicaSet, Deployment, Service, Secret ....
+kind: Namespace
+## Add Labels or Any other user defined values
+metadata:
+  ## Name element would help you to define NAME of Current Object
+  name: dev
+## to create use following command
+## $ kubectl apply -f dev-namespaces.yml
